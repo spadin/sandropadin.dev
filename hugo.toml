@@ -1,0 +1,56 @@
+# Hugo Configuration
+baseURL = "https://sandropadin.dev/"
+languageCode = "en-us"
+title = "sandropadin.dev"
+
+# Theme
+theme = "PaperMod"
+
+# Enable GitHub Flavored Markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = true
+      table = true
+      taskList = true
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+
+# Permalinks
+[permalinks]
+  posts = "/posts/:slug/"
+
+# Menu
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+# PaperMod theme settings
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = false
+  TocOpen = false
+
+  [params.homeInfoParams]
+    Title = "Welcome"
+    Content = "Personal thoughts and opinions on software and artificial intelligence"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/"
